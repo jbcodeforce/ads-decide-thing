@@ -1,0 +1,92 @@
+
+
+public class Driver
+        property "ads.typeId" "1"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Driver"
+        property "de.generated" "true"
+{
+    public java.lang.Long age
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "age"
+                property update "true";
+    public string city
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "city"
+                property update "true";
+    public string name
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "name"
+                property update "true";
+    public double points
+                property "ads.attributeId" "5"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "points"
+                property update "true";
+    public string state
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "state"
+                property update "true";
+    public Driver(java.lang.Long age, string city, string name, double points, string state)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Driver()
+                property "dataio.default" "true";
+}
+
+public class Fine
+        property "ads.typeId" "3"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Fine"
+        property "de.generated" "true"
+{
+    public double amount
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "amount"
+                property update "true";
+    public double points
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "points"
+                property update "true";
+    public Fine(double amount, double points)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Fine()
+                property "dataio.default" "true";
+}
+
+public class Violation
+        property "ads.typeId" "2"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Violation"
+        property "de.generated" "true"
+{
+    public double actualSpeed
+                property "ads.attributeId" "5"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "actual speed"
+                property update "true";
+    public string code
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "code"
+                property update "true";
+    public ilog.rules.brl.Date date
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "date"
+                property update "true";
+    public double speedLimit
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "speed limit"
+                property update "true";
+    public string type
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "type"
+                property update "true";
+    public Violation(double actualSpeed, string code, ilog.rules.brl.Date date, double speedLimit, string type)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Violation()
+                property "dataio.default" "true";
+}
+

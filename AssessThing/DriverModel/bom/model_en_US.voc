@@ -1,0 +1,50 @@
+
+# Driver
+Driver#concept.documentation = 
+Driver#concept.label = Driver
+Driver.Driver(java.lang.Long,java.lang.String,java.lang.String,double,java.lang.String)#phrase.navigation = a new {Driver} where {0, age} {1, city} {2, name} {3, points} {4, state}
+Driver.age#phrase.action = set the age of {this} to {age}
+Driver.age#phrase.addition_setter = add {age} to the age of {this}
+Driver.age#phrase.navigation = {age} of {this}
+Driver.age#phrase.subtraction_setter = subtract {age} from the age of {this}
+Driver.city#phrase.action = set the city of {this} to {city}
+Driver.city#phrase.navigation = {city} of {this}
+Driver.name#phrase.action = set the name of {this} to {name}
+Driver.name#phrase.navigation = {name} of {this}
+Driver.points#phrase.action = set the points of {this} to {points}
+Driver.points#phrase.addition_setter = add {points} to the points of {this}
+Driver.points#phrase.navigation = {points} of {this}
+Driver.points#phrase.subtraction_setter = subtract {points} from the points of {this}
+Driver.state#phrase.action = set the state of {this} to {state}
+Driver.state#phrase.navigation = {state} of {this}
+
+# Fine
+Fine#concept.label = Fine
+Fine.Fine(double,double)#phrase.navigation = a new {Fine} where {0, amount} {1, points}
+Fine.amount#phrase.action = set the amount of {this} to {amount}
+Fine.amount#phrase.addition_setter = add {amount} to the amount of {this}
+Fine.amount#phrase.navigation = {amount} of {this}
+Fine.amount#phrase.subtraction_setter = subtract {amount} from the amount of {this}
+Fine.points#phrase.action = set the points of {this} to {points}
+Fine.points#phrase.addition_setter = add {points} to the points of {this}
+Fine.points#phrase.navigation = {points} of {this}
+Fine.points#phrase.subtraction_setter = subtract {points} from the points of {this}
+
+# Violation
+Violation#concept.label = Violation
+Violation.Violation(double,java.lang.String,ilog.rules.brl.Date,double,java.lang.String)#phrase.navigation = a new {Violation} where {0, actual speed} {1, code} {2, date} {3, speed limit} {4, type}
+Violation.actualSpeed#phrase.action = set the actual speed of {this} to {actual speed}
+Violation.actualSpeed#phrase.addition_setter = add {actual speed} to the actual speed of {this}
+Violation.actualSpeed#phrase.navigation = {actual speed} of {this}
+Violation.actualSpeed#phrase.subtraction_setter = subtract {actual speed} from the actual speed of {this}
+Violation.code#phrase.action = set the code of {this} to {code}
+Violation.code#phrase.navigation = {code} of {this}
+Violation.date#phrase.action = set the date of {this} to {date}
+Violation.date#phrase.clearer = clear the date of {this}
+Violation.date#phrase.navigation = {date} of {this}
+Violation.speedLimit#phrase.action = set the speed limit of {this} to {speed limit}
+Violation.speedLimit#phrase.addition_setter = add {speed limit} to the speed limit of {this}
+Violation.speedLimit#phrase.navigation = {speed limit} of {this}
+Violation.speedLimit#phrase.subtraction_setter = subtract {speed limit} from the speed limit of {this}
+Violation.type#phrase.action = set the type of {this} to {type}
+Violation.type#phrase.navigation = {type} of {this}

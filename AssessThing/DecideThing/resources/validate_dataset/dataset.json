@@ -1,0 +1,10 @@
+{
+  "driver": {
+    "name": "Bill",
+    "points": 19
+  },
+  "fine": {
+    "points": 3,
+    "amount": 50
+  }
+}

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>a6609e81-ed40-4f76-b450-64bddbcb15c3</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="driver">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="Driver" collection="false" name="driver"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="driver" typeRef="Driver"/>
+    </inputData>
+    <decision id="node_1" name="Should driver be suspended">
+        <description>Should the driver be suspended due to points on his license?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="Driver" collection="false" name="driver"/>
+                <input bomType="java.lang.Double" collection="false" name="the fine points computed"/>
+                <output bomType="java.lang.Boolean" collection="false" name="Should driver be suspended"/>
+                <rule defaultRule="false" href="node_1/total%20points%20over%2020.drl" kind="BusinessRule" name="total points over 20"/>
+                <rule defaultRule="true" href="node_1/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Should driver be suspended" typeRef="java.lang.Boolean"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_2" name="fine">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="Fine" collection="false" name="fine"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_2_ii" name="fine" typeRef="Fine"/>
+    </inputData>
+    <decision id="node_3" name="the fine points computed">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="Fine" collection="false" name="fine"/>
+                <output bomType="java.lang.Double" collection="false" name="the fine points computed"/>
+                <rule defaultRule="false" href="node_3/compute%20points%20from%20fine.dmt" kind="DecisionTable" name="compute points from fine"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_3_ii" name="the fine points computed" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+    </decision>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>
